@@ -1,5 +1,5 @@
 services:
-  fitflow_database:
+  fitflow-database:
     image: postgres:17
     environment:
       POSTGRES_DB: ${DB_NAME}
@@ -17,16 +17,16 @@ services:
     build: .
     working_dir: /app
     depends_on:
-      - fitflow_database
+      - fitflow-database
     ports:
       - "8000:8000"
     environment:
       - PYTHONBUFFERED=0
-      - DJANGO_SETTINGS_MODULE=fitflow.settings
+      - DJANGO_SETTINGS_MODULE=settings.base
       - DJANGO_LOG_LEVEL=INFO
       - OAUTHLIB_INSECURE_TRANSPORT=False
       - DEBUG=True
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver fitflow.localhost:8000
     volumes:
       - ./project:/app
     env_file:
