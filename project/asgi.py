@@ -1,5 +1,5 @@
 """
-ASGI config for fitflow project.
+ASGI config for vitality_track project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

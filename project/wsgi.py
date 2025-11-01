@@ -1,5 +1,5 @@
 """
-WSGI config for fitflow project.
+WSGI config for vitality_track project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
